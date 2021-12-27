@@ -1,0 +1,17 @@
+
+
+0- Autenticarsi su GCP con il seguente comando:
+
+> gcloud auth login
+
+1- Imposta l'ID del progetto associato alla cloud shell con il seguente comando:
+
+> gcloud config set project [PROJECT_ID]
+(esempio: gcloud config set project cloud-run-tdig)
+
+2- Lancia lo script per preparare l'ambiente 
+> . prepare.sh
+
+3- Esegui il build e il deploy dell'applicazione con il seguente comando:
+
+> gcloud builds submit --config cloudbuild.yaml
