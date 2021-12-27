@@ -17,5 +17,5 @@ echo "[Step 6/6] CRunning NGINX container ..."
 docker run -d --name sigla-nginx -p 8080:80 --link sigla-thorntail:sigla-thorntail --link sigla-ng:sigla-ng -v $(pwd)/conf.d/:/etc/nginx/conf.d/:ro -ti nginx
 
 echo "Attendere qualche minuto e collegarsi a SIGLA-NG cliccando sull'icona Web Preview in alto a sinistra"
-echo "Utilizzare come user-name ENTE ed impostare la password al primo login."
+echo "Utilizzare come user-name ENTE e cliccare cambia password al primo login."
 
