@@ -2,3 +2,5 @@
 
 1- Lancia lo script per eseguire Sigla NG su docker su Google Cloud Platform
 > . run-on-docker.sh
+
+2- collegati alla web preview sulla porta 8080
