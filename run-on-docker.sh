@@ -13,7 +13,7 @@ docker run -d --name sigla-thorntail --link sigla-h2:db -e THORNTAIL_PROJECT_STA
 echo "[Step 5/6] Running sigla-ng container ..."
 docker run -d --name sigla-ng --link sigla-h2:db -e SPRING_PROFILES_ACTIVE=demo -e SPRING_DATASOURCE_URL="jdbc:h2:tcp://db:1521/db-sigla" -ti consiglionazionalericerche/sigla-ng:latest
 
-echo "[Step 6/6] CRunning NGINX container ..."
+echo "[Step 6/6] Running NGINX container ..."
 docker run -d --name sigla-nginx -p 8080:80 --link sigla-thorntail:sigla-thorntail --link sigla-ng:sigla-ng -v $(pwd)/conf.d/:/etc/nginx/conf.d/:ro -ti nginx
 
 echo "Attendere qualche minuto e collegarsi a SIGLA-NG cliccando sull'icona Web Preview in alto a sinistra"
